@@ -23,7 +23,8 @@ export default {
     ...mapActions(["addTodo"]),
     onSubmit(e) {
       e.preventDefault();
-      this.title.length > 0 ? this.addTodo(this.title) : this.addTodo("gay")
+      this.title.length > 0 ? this.addTodo(this.title) : null
+      
     }
   }
 };

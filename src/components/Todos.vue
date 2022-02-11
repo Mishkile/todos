@@ -18,6 +18,7 @@
         :key="todo.id"
         class="todo"
         v-bind:class="{'is-complete':todo.completed}"
+
       >
      
         {{ todo.title }}
@@ -60,7 +61,8 @@ export default {
 
 .todo {
   border: 1px solid #ccc;
-  background: #1c794f;
+  background: #833636;
+  
   padding: 1rem;
   border-radius: 5px;
   text-align: center;
@@ -73,7 +75,7 @@ export default {
 
 .todo:hover {
 margin-top: 2px ;
-box-shadow: 7px 4px 5px 0px rgba(0,0,0,0.4);
+box-shadow: 7px 4px 5px 0px rgba(31, 31, 31, 0.664);
 
 }
 
@@ -106,7 +108,7 @@ i {
 }
 
 .is-complete {
-  background: #833636;
+  background: #1c794f;
   color: #fff;
 }
 

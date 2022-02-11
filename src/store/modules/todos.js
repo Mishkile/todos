@@ -16,13 +16,22 @@ const actions = {
 
     commit('setTodos', response.data);
   },
+
   async addTodo({ commit }, title) {
-    const response = await axios.post(
+
+    let todo = { title, completed: false }
+
+    await axios.post(
       'https://jsonplaceholder.typicode.com/todos',
-      { title, completed: false }
+      { todo }
     );
 
-    commit('newTodo', response.data);
+
+
+
+
+
+    commit('newTodo', todo);
   },
   async deleteTodo({ commit }, id) {
     await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
